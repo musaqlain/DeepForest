@@ -24,12 +24,15 @@ repos:
         files: ^docs/user_guide/examples/.*\.ipynb$
 
   # Docstrings: auto-format
-  - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.7
+  - repo: local
     hooks:
       - id: docformatter
-        additional_dependencies: [tomli]
+        name: docformatter
+        entry: docformatter
+        language: python
         language_version: python3.12
+        additional_dependencies: [docformatter]
+        types: [python]
         args: ["--in-place"]
         files: |
           (?x)^(
