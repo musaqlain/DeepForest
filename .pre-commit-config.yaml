@@ -30,6 +30,7 @@ repos:
         name: docformatter
         entry: docformatter
         language: python
+        language_version: python3.12
         additional_dependencies: [docformatter]
         types: [python]
         args: ["--in-place"]
